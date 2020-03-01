@@ -20,15 +20,13 @@ public class Task {
     private String status;
     private String resolution;
 
-    public Task(String creator, String description, LocalDate creationDate, String status, String resolution) throws TodoListException {
+    public Task(String creator, String description, LocalDate creationDate, String status) throws TodoListException {
         this.creator = creator;
         this.description = description;
         checkCoherentCreationDate(creationDate);
         this.creationDate = creationDate;
         checkTodoListStatus(status);
         this.status = status;
-        checkTodoListResolution(resolution);
-        this.resolution = resolution;
     }
 
     public String getCreator() {

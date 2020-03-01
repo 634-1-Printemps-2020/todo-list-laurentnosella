@@ -5,14 +5,18 @@ import java.util.ArrayList;
 
 public class TodoList implements ITodoList {
 
-    ArrayList<Task> todoList;
+    private ArrayList<Task> todoList;
 
     public TodoList() {
     }
 
+    public ArrayList<Task> getTodoList() {
+        return todoList;
+    }
+
     @Override
-    public void createTask(String creator, String description, LocalDate creationDate, String status, String resolution) throws TodoListException {
-        Task newTask = new Task(creator,description,creationDate,status,resolution);
+    public void createTask(String creator, String description, LocalDate creationDate, String status) throws TodoListException {
+        Task newTask = new Task(creator,description,creationDate,status);
         todoList.add(newTask);
     }
 

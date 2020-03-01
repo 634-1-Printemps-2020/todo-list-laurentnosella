@@ -12,7 +12,7 @@ consulter ses tâches ou les tâches des autres avec possibilité de filtrage su
  */
 public interface ITodoList {
 
-    void createTask(String creator, String description, LocalDate creationDate, String status, String resolution) throws TodoListException;
+    void createTask(String creator, String description, LocalDate creationDate, String status) throws TodoListException;
 
     void cancelTask(Task taskToCancel) throws TodoListException;
 
