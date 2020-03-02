@@ -3,7 +3,6 @@ package ch.hesge.cours634.todolist;
 import org.junit.*;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 
 public class TaskTest {
 
@@ -21,7 +20,7 @@ public class TaskTest {
     }
 
     @Test (expected = TodoListException.class)
-    public void setIncorrectCorrectCreationDate() throws TodoListException {
+    public void setIncorrectCreationDate() throws TodoListException {
         taskTest = new Task(creator,description,creationDate,status);
         taskTest.setCreationDate(creationDate.minusDays(1));
     }
